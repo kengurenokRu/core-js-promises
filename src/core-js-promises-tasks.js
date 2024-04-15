@@ -88,7 +88,7 @@ function getFirstResolvedPromiseResult(promises) {
  * [promise3, promise4, promise6] => Promise rejected with 6
  */
 function getFirstPromiseResult(promises) {
-  return Promise.all(promises);
+  return Promise.race(promises);
 }
 
 /**
